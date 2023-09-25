@@ -6,20 +6,17 @@
 // *El número X es multiplo de 7
 
 
-const numeroIngresado = parseInt( prompt("Ingrese un número para calcular sus múltiplos") )
-let numero =  1;
+// const numeroIngresado = parseInt( prompt("Ingrese un número para calcular sus múltiplos") )
+// let numero =  1;
 
-while(  numero <= numeroIngresado   ) {
+// while(  numero <= numeroIngresado   ) {
     
-    if( numero % 7 === 0  ) {
-        console.log(`El número ${numero} es multiplo de 7`)
-    }
+//     if( numero % 7 === 0  ) {
+//         console.log(`El número ${numero} es multiplo de 7`)
+//     }
 
-    numero++
-}
-
-
-
+//     numero++
+// }
 
 
 
@@ -37,3 +34,21 @@ while(  numero <= numeroIngresado   ) {
     NO ESTA BIEN: ( 10 + 10 + 10 + 0 ) /  4 = 7,5
     #ESTA BIEN: ( 10 + 10 + 10) /  3 = 10
 */ 
+
+let nota = parseInt(  prompt("Ingrese la calificación del alumno 2")  );
+let cantidadNotas = 0;
+let acumuladoNotas = 0;
+
+do {
+
+    if(nota > 0) {
+        cantidadNotas++;
+        acumuladoNotas += nota;
+    }
+    
+    nota = parseInt(prompt("Ingrese la calificación del alumno"));
+}while(nota !== 0);
+
+const promedio = acumuladoNotas/cantidadNotas 
+
+console.log(`El promedio de notas es de: ${promedio}`)
